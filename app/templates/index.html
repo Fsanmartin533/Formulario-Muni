@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario de Registro</title>
+<link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+
+    <div class="container">
+    <!------------------------------------------------>
+        <h2>Datos Personales</h2>
+        <div class="separador">
+            <hr />
+            <span> 0 </span>
+            <hr />
+        </div>
+        <br>
+    <!------------------------------------------------>
+        <form action = "{{ url_for('registrarForm')}}" id="formulario1" method="POST" >
+            <div class="grupo">
+                <label for="nombre">Nombre Completo*</label>
+                <input type="text" clase="nombre" name="nombre" {% if error_nombre %} class = "error" {% endif %} required>
+                {% if error_nombre %}
+                <p class="error-message"> {{ error_nombre }} </p>
+                {% endif %}
+            </div>
+            <!------------------------------------------------>
+            <div class="grupo">
+                <label for="apellido">Apellido*</label>
+                <input type="text" clase="apellido" name="apellido" {% if error_apellido %} class = "error" {% endif %} required>
+                {% if error_apellido %}
+                <p class="error-message"> {{ error_apellido }} </p>
+                {% endif %}
+            </div>
+            <!------------------------------------------------>
+            <div class="grupo">
+                <label for="edad">Edad*</label>
+                <input type="number" clase="edad" name="edad" {% if error_edad %} class = "error" {% endif %} required>
+                {% if error_edad %}
+                <p class="error-message"> {{ error_edad }} </p>
+                {% endif %}
+            </div>
+            <!------------------------------------------------>
+            <div class="grupo">
+                <label for="nacimiento">Fecha de Nacimiento*</label>
+                <input type="date" clase="nacimiento" name="nacimiento" {% if error_nacimiento %} class = "error" {% endif %} required>
+                {% if error_nacimiento %}
+                <p class="error-message"> {{ error_nacimiento }} </p>
+                {% endif %}
+            </div>
+            <!------------------------------------------------>
+            <div class="grupoGenero">
+                <p>Genero*
+                    <br>
+                    <input type="radio" name="genero" value="1" required> Masculino
+                    <br>
+                    <input type="radio" name="genero" value="2" required> Femenino
+                    <br>
+                    <input type="radio" name="genero" value="3" required> Otro
+                </p>
+            </div>
+            <!------------------------------------------------>
+            <div class="grupo">
+                <label for="correo">Correo Electrónico*</label>
+                <input type="email" clase="correo" name="correo" {% if error_correo %} class = "error" {% endif %} required>
+                {% if error_correo %}
+                <p class="error-message"> {{ error_correo }} </p>
+                {% endif %}
+                <!------------------------------------------------>
+                <label for="confirmar_correo">Confirmar Correo Electrónico*</label>
+                <input type="email" clase="confirmar_correo" name="confirmar_correo" {% if error_correo %} class = "error" {% endif %} required>
+                {% if error_correo %}
+                <p class="error-message"> {{ error_correo }} </p>
+                {% endif %}
+            </div>
+            <!------------------------------------------------>
+            <div class="grupo">
+                <label for="residencia">Lugar de Residencia*</label>
+                <input type="text" clase="residencia" name="residencia" required>
+            </div>
+            <!------------------------------------------------>
+            <div class="grupo">
+                <label for="telefono">Teléfono*</label>
+                <input type="tel" clase="telefono" name="telefono" required>
+            </div>
+            <!------------------------------------------------>
+            <!--<button type="button">Continuar</button>-->
+            <input class="button-primary" type="submit" value="Enviar">
+
+        </form>
+
+    </div>
+
+</body>
+</html>

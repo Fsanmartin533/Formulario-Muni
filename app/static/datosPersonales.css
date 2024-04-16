@@ -1,0 +1,13 @@
+
+
+div .grupoGenero {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/*----------------------------------------------------------*/
+
+input[type="radio"] {
+    width: 15px;
+}
+

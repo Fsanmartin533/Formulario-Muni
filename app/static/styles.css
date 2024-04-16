@@ -1,0 +1,130 @@
+
+@import "datosPersonales.css";
+@import "experienciaLaboral.css";
+/*----------------------------------------------------------*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+}
+/*----------------------------------------------------------*/
+.separador {
+    display: flex;
+    width: 100%;
+    gap: 15px;
+    padding: 10px;
+}
+
+.separador hr {
+    flex-grow: 1;
+    border: none;
+    border-top: 2px solid #338c36;
+}
+
+.separador span {
+    color: #338c36;
+}
+/*----------------------------------------------------------*/
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/*----------------------------------------------------------*/
+
+.grupo{
+    margin-bottom: 20px;
+}
+
+div .grupo {
+    background-color: #f1f3f4;
+    padding: 20px;
+    border-radius: 30px;
+    border-bottom: 2px solid #338c36;
+}
+
+/*----------------------------------------------------------*/
+
+label, p {
+    display: block;
+    font-weight: bold;
+}
+
+/*----------------------------------------------------------*/
+
+input, select {
+    width: 90%;
+    background-color: #f1f3f4;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    padding: 10px 20px;
+    font-size: 12pt;
+    margin: 20px;
+    border-bottom: 1px solid black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+input:hover {
+    border-bottom: 3px solid #338c36;
+}
+
+/*Modificar, sacar este focus y poner borde izquierdo de color verde*/
+input:focus {
+    background-color: white;
+    border: solid 1px #f1f3f4;
+    box-shadow: 0 0 4px #338c36;
+}
+
+/*----------------------------------------------------------*/
+
+button{
+    background-color: #338c36;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+    margin: 5px;
+}
+button:hover {
+    opacity: 80%;
+}
+
+/*----------------------------------------------------------*/
+
+@media only screen and (max-width: 768px) {
+    .elemento {
+        font-size: 14px; /* Reducir el tamaño de la fuente */
+        padding: 5px; /* Reducir el espaciado */
+    }
+
+    .otro-elemento {
+        display: none; /* Ocultar ciertos elementos que no son necesarios en dispositivos móviles */
+    }
+}
+
+/*----------------------------------------------------------*/
+
+input.error {
+    border: 1px solid red;
+}
+
+/* Estilo del mensaje de error */
+.error-message {
+    color: red;
+    font-size: 10px;
+    margin-top: 3px; /* Espacio superior para separar el mensaje del campo de entrada */
+}
