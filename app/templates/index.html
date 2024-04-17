@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Formulario de Registro</title>
 <link rel="stylesheet" href="../static/styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -68,7 +71,9 @@
                 {% if error_correo %}
                 <p class="error-message"> {{ error_correo }} </p>
                 {% endif %}
+            </div>
                 <!------------------------------------------------>
+            <div class="grupo">
                 <label for="confirmar_correo">Confirmar Correo Electrónico*</label>
                 <input type="email" clase="confirmar_correo" name="confirmar_correo" {% if error_correo %} class = "error" {% endif %} required>
                 {% if error_correo %}
@@ -83,11 +88,17 @@
             <!------------------------------------------------>
             <div class="grupo">
                 <label for="telefono">Teléfono*</label>
-                <input type="tel" clase="telefono" name="telefono" required>
+                <input type="tel" clase="telefono" name="telefono" {% if error_telefono %} class = "error" {% endif %} required>
+                {% if error_telefono %}
+                <p class="error-message"> {{ error_telefono }} </p>
+                {% endif %}
             </div>
             <!------------------------------------------------>
             <!--<button type="button">Continuar</button>-->
-            <input class="button-primary" type="submit" value="Enviar">
+            <div class="boton">
+                <input class="button-continuar" type="submit" value="Continuar">
+            </div>
+                
 
         </form>
 

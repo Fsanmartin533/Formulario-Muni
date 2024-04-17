@@ -43,6 +43,10 @@ def registrarForm():
     if not validar_correo(correo, confirmar_correo):
         error_correo = "Los correos no coisiden"
         return render_template('index.html', error_correo = error_correo)
+    
+    if not validar_telefono(telefono):
+        error_telefono = "No se permiten caracteres de tipo letras"
+        return render_template('index.html', error_telefono = error_telefono)
 
     #--------------------------------------------------------
 

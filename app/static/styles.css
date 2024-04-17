@@ -3,11 +3,35 @@
 @import "experienciaLaboral.css";
 /*----------------------------------------------------------*/
 body {
-    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
 }
+
+.ubuntu-light {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .ubuntu-regular {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .ubuntu-medium {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .ubuntu-bold {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
 
 h2 {
     text-align: center;
@@ -54,6 +78,11 @@ div .grupo {
     border-bottom: 2px solid #338c36;
 }
 
+div .boton {
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
 /*----------------------------------------------------------*/
 
 label, p {
@@ -63,8 +92,8 @@ label, p {
 
 /*----------------------------------------------------------*/
 
-input, select {
-    width: 90%;
+input {
+    width: 80%;
     background-color: #f1f3f4;
     border: none;
     border-radius: 10px;
@@ -73,37 +102,19 @@ input, select {
     font-size: 12pt;
     margin: 20px;
     border-bottom: 1px solid black;
-    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 input:hover {
     border-bottom: 3px solid #338c36;
 }
 
-/*Modificar, sacar este focus y poner borde izquierdo de color verde*/
 input:focus {
-    background-color: white;
-    border: solid 1px #f1f3f4;
-    box-shadow: 0 0 4px #338c36;
+    border-bottom: 1px solid #338c36;
+    border-left: 5px solid #338c36; /* Establece un borde izquierdo de color verde cuando el input está enfocado */
 }
 
 /*----------------------------------------------------------*/
 
-button{
-    background-color: #338c36;
-    color: #fff;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    float: right;
-    margin: 5px;
-}
-button:hover {
-    opacity: 80%;
-}
-
-/*----------------------------------------------------------*/
 
 @media only screen and (max-width: 768px) {
     .elemento {
@@ -114,6 +125,23 @@ button:hover {
     .otro-elemento {
         display: none; /* Ocultar ciertos elementos que no son necesarios en dispositivos móviles */
     }
+}
+
+/*----------------------------------------------------------*/
+
+.button-continuar {
+    width: 20%;
+    background-color: #338c36;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+}
+
+.button-continuar:hover {
+    opacity: 80%;
 }
 
 /*----------------------------------------------------------*/

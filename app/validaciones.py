@@ -5,7 +5,7 @@ def validacionNombre(nombre):
     if len(nombre) > 40:
         return False
     
-    if not re.match("^[a-zA-Z]+$", nombre):
+    if not re.match("^[a-zA-Z]+$", nombre.replace(" ", "")):
         return False
     
     return True
@@ -14,7 +14,7 @@ def validacionApellido(apellido):
     if len(apellido) > 40:
         return False
     
-    if not re.match("^[a-zA-Z]+$", apellido):
+    if not re.match("^[a-zA-Z]+$", apellido.replace(" ", "")):
         return False
     
     return True
@@ -42,6 +42,13 @@ def validar_nacimiento(fecha_str):
 
 def validar_correo(correo, confirmar_correo):
     if correo == confirmar_correo:
+        return True
+    else:
+        return False
+    
+def validar_telefono(telefono):
+    # Verifica si todos los caracteres en la cadena son dígitos
+    if telefono.isdigit():
         return True
     else:
         return False
